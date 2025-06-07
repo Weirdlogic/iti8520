@@ -1,0 +1,1 @@
+var modelInfo = {model:"TrafficLightController"};var modelHierarchy=[{model:"TrafficLightController",relativePath:"_internal.html",parent:"null"},];var AddCode = true;var ProtectedModel = false;

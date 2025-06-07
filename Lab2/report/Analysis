@@ -1,0 +1,47 @@
+# Coverage Analysis Report - Assignment 4.4
+
+## Coverage Results Summary
+
+The coverage analysis of the traffic light control system revealed varying levels of decision coverage across different components, providing valuable insights into the thoroughness of the test scenarios.
+
+## Coverage Performance Analysis
+
+### Main Traffic Light Controller
+The main Stateflow chart achieved **79% decision coverage (30/38 decision outcomes)**, indicating good overall coverage of the core traffic light logic. The system successfully exercised most state transitions and timing conditions during normal operation cycles.
+
+### Observer System Coverage
+- **Safety Observer**: Achieved **100% execution coverage**, demonstrating that the safety interlock verification logic is fully tested
+- **Car Green Time Observer**: Achieved **88% decision coverage**, showing comprehensive testing of minimum car green time requirements
+- **Pedestrian Duration Observer**: Achieved **88% decision coverage**, indicating good coverage of pedestrian timing verification
+- **Button Response Observer**: Achieved only **54% decision coverage**, representing the most significant coverage gap
+
+## Areas Requiring Improvement
+
+### Critical Coverage Gaps
+The **Button Response Observer** showed the lowest coverage with several untested scenarios:
+
+1. **CheckTiming State**: Never executed (0% coverage), indicating that scenarios where button response approaches the 18-second timeout limit were not tested
+2. **Temporal Logic Branches**: The `after(18,sec)` transition condition was never exercised, meaning we haven't verified the system's behavior when button response times are inadequate
+
+### Main Controller Gaps
+The main Stateflow chart, while achieving good overall coverage, still has **21% of decision outcomes** untested, suggesting some edge cases or unusual timing scenarios weren't encountered during simulation.
+
+## Recommendations for Improved Testing
+
+### Immediate Improvements
+1. **Extended Simulation Duration**: Increase simulation time beyond 60 seconds to allow more complex timing scenarios to develop
+2. **Edge Case Testing**: Add test scenarios specifically designed to approach timeout limits (e.g., button presses that should trigger responses close to the 18-second limit)
+3. **Stress Testing**: Create scenarios with rapid button presses or unusual timing patterns
+
+### Comprehensive Test Scenarios
+1. **Button Response Timeout Testing**: Design scenarios where the system approaches but doesn't exceed the 18-second response limit
+2. **Multiple Button Press Sequences**: Test scenarios with multiple button presses in quick succession
+3. **Extended Operation Cycles**: Run longer simulations to capture less frequent state transitions
+
+## Impact Assessment
+
+The current coverage levels are acceptable for basic functionality verification, with safety-critical components (Safety Observer) achieving full coverage. However, the gaps in button response testing represent a potential risk area that should be addressed to ensure comprehensive verification of all specified requirements.
+
+## Conclusion
+
+While the traffic light system demonstrates good overall coverage, targeted improvements in test scenario design—particularly for button response timing edge cases—would significantly enhance the verification confidence. The systematic identification of these gaps through coverage analysis demonstrates the value of this verification approach in safety-critical system development.
