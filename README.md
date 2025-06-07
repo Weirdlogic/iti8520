@@ -1,6 +1,7 @@
 # ITI8520 Real-time Software Engineering
 
-## Lab 1: Extended Double Pelican Crossing System
+## Lab 1: Extended Double Pelican Crossing System  
+## Lab 2: Functional modelling in Simulink and Stateflow
 
 **Authors:** [Adetunji Adeyimika]
 **Project:** Model-driven development of traffic light control system
@@ -9,6 +10,10 @@
 ### Project Description
 Development of requirements and models for an Extended Double Pelican Crossing traffic light system using model-based systems engineering principles.
 
-Repo https://github.com/Weirdlogic/iti8520
 
 Difficulties Doing Part 2 of Labl1 due to lack of embedded coder license
+
+https://github.com/Weirdlogic/iti8520/tree/main/Lab1
+
+LAb2 
+https://github.com/Weirdlogic/iti8520/tree/main/Lab2
